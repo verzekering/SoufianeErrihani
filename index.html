@@ -10,6 +10,13 @@
     section { max-width: 800px; margin: 20px auto; padding: 20px; background-color: white; border-radius: 5px; }
     a { color: #007BFF; text-decoration: none; }
     a:hover { text-decoration: underline; }
+    .projects { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+    .project-card { width: 300px; text-align: center; }
+    .project-card img { max-width: 100%; height: auto; cursor: pointer; }
+    .modal { display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4); }
+    .modal-content { background-color: white; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 70%; max-width: 500px; }
+    .close { color: #aaa; float: right; font-size: 28px; font-weight: bold; }
+    .close:hover, .close:focus { color: black; text-decoration: none; cursor: pointer; }
   </style>
 </head>
 <body>
@@ -27,7 +34,46 @@
   </section>
   <section id="projects">
     <h2>Projecten</h2>
-    <p>Kom later terug voor verwijzingen naar mijn GIS-projecten, waaronder analyses van NDVI en hittestress. Meer content wordt binnenkort toegevoegd!</p>
+    <div class="projects">
+      <div class="project-card">
+        <a href="https://github.com/verzekering/NDVI-Hittestress-Report" target="_blank">
+          <img src="hittestress_rotterdam_page-0001.jpg" alt="NDVI en Hittestress Rotterdam" onclick="openModal('project1')">
+        </a>
+        <p>NDVI en Hittestress Analyse</p>
+      </div>
+    </div>
   </section>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">×</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+  <script>
+    function openModal(projectId) {
+      const modal = document.getElementById("myModal");
+      const title = document.getElementById("modalTitle");
+      const description = document.getElementById("modalDescription");
+      modal.style.display = "block";
+
+      switch(projectId) {
+        case 'project1':
+          title.innerHTML = "NDVI en Hittestress Analyse";
+          description.innerHTML = "Analyse van vegetatiegezondheid (NDVI) en hittestress in Rotterdam, inclusief een OLS-regressie om de relatie met temperatuur te onderzoeken.";
+          break;
+      }
+    }
+
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == document.getElementById("myModal")) {
+        closeModal();
+      }
+    }
+  </script>
 </body>
 </html>
