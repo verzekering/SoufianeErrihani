@@ -1,2 +1,0 @@
-# SoufianeErrihani
-Mijn portfolio-website
