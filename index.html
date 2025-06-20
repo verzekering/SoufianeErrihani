@@ -1,279 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soufiane Errihani - Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
+<html lang="nl">
+	<head>
+		<meta charset="utf-8">
+		<link rel="icon" href="./assets/images/profiel_soufiane.png" />
+		<title>Portfolio Soufiane Errihani</title>
+		<meta name="description" content="Een watermanagementportfolio gemaakt door Soufiane Errihani.">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="./css/layout.css">
+		<link rel="stylesheet" href="./css/typography.css">
+		<link rel="stylesheet" href="./css/utilities.css">
+		<script defer src="./js/script.js"></script>
+	</head>
+	<body>
+		<!-- NAVBAR -->
+		<div class="navbar">
+			<a class="nav-title-link" href="./index.html">
+				<span class="nav-title">Portfolio Watermanagement</span>
+				<a class="button" href="mailto:soufiane.errihani@example.com">
+					<span class="button-text">Contacteer Mij</span>
+					<image src="./assets/icons/arrow-right.svg" class="right-arrow-icon">
+				</a>
+			</a>
+		</div>
 
-        body {
-            background-color: #f4f4f9;
-            color: #333;
-            line-height: 1.6;
-            display: flex;
-        }
+		<!-- MAIN PAGE CONTENT -->
+		<div id="main-content">
+			<!-- PORTFOLIO HEADER -->
+			<div id="portfolio-header">
+				<div id="portfolio-header-image-container">
+					<img src="./assets/images/profiel_soufiane.png" class="portfolio-header-image">
+				</div>
+				<div id="portfolio-header-text-container">
+					<div class="header-text">
+						<span class="main-title">Hallo! Ik ben Soufiane Errihani</span>
+						<div class="body-text">Hallo! Ik ben Soufiane Errihani, student Watermanagement aan de Hogeschool Rotterdam.</div>
+					</div>
+					<a class="button" id="my-work-link">
+						<span class="button-text">Bekijk mijn projecten</span> 
+						<image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+					</a>
+				</div>
+			</div>
 
-        /* Sidebar Navigation */
-        nav {
-            width: 250px;
-            height: 100vh;
-            background-color: #1a252f;
-            position: fixed;
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
+			<!-- ABOUT SECTION -->
+			<div id="about-section">
+				<span class="subheader-text">Over Mij</span>
+				<div class="about-section-content">
+					<div class="body-text">Hallo! Ik ben Soufiane Errihani, student Watermanagement aan de Hogeschool Rotterdam. Via mijn opleiding heb ik al een sterke basis opgebouwd in methoden voor watergerelateerde vraagstukken, en recentelijk heb ik mijn vaardigheden uitgebreid met GIS-software, remote sensing, Python, SQL en Data Science. Momenteel ben ik op zoek naar een afstudeerstage waarin ik mijn kennis kan toepassen en verder kan ontwikkelen, bij voorkeur in GIS, data science, remote sensing of een gerelateerde richting.</div>
+					<div class="body-text">Bekijk mijn CV voor meer details over mijn opleiding en ervaring.</div>
+				</div>
+			</div>
 
-        nav ul {
-            list-style: none;
-        }
+			<!-- PROJECTS / MY WORK SECTION -->
+			<div id="my-work-section">
+				<span class="subheader-text">Mijn Projecten</span>
+				<div class="projects-container">
+					<div class="project-card">
+						<img src="./assets/images/ndvi_rotterdam.jpg" class="project-image"> 
+						<div class="project-card-text-container">
+							<div class="subheader-text project-title">NDVI & Hittestress Rotterdam</div>
+							<div class="body-text project-card-text">Dit rapport presenteert een analyse van vegetatiegezondheid (NDVI) en hittestress in Rotterdam, uitgevoerd met ArcGIS Pro.</div>
+						</div>
+						<a class="button" href="./project-pages/ndvi_hittestress.html">
+							<span class="button-text">Lees Meer</span>
+							<image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+						</a>
+					</div>
+					<div class="project-card">
+						<img src="./assets/images/wamtec_legger.jpg" class="project-image">
+						<div class="project-card-text-container">
+							<div class="subheader-text project-title">WAMTEC Legger Herontwerp</div>
+							<div class="body-text project-card-text">In dit project heb ik een gedetailleerde analyse uitgevoerd voor de WAMTEC legger groep 5, gericht op watergangen en duikers.</div>
+						</div>
+						<a class="button" href="./project-pages/wamtec_legger.html">
+							<span class="button-text">Lees Meer</span>
+							<image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+						</a>
+					</div>
+					<div class="project-card">
+						<img src="./assets/images/coole_pleinen.jpg" class="project-image">
+						<div class="project-card-text-container">
+							<div class="subheader-text project-title">ArcGIS Storymap Coole Pleinen (Stage EMI)</div>
+							<div class="body-text project-card-text">https://storymaps.arcgis.com/stories/ac1ea2c7fc664c068d9ac9c7c28a00ce</div>
+						</div>
+						<a class="button" href="./project-pages/coole_pleinen.html">
+							<span class="button-text">Lees Meer</span>
+							<image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
 
-        nav li {
-            margin: 1.5rem 0;
-        }
-
-        nav a {
-            color: #e0e0e0;
-            text-decoration: none;
-            font-size: 1.1rem;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #00aaff;
-        }
-
-        nav .social-links a {
-            color: #e0e0e0;
-            margin-right: 1rem;
-            font-size: 1.2rem;
-        }
-
-        nav .social-links a:hover {
-            color: #00aaff;
-        }
-
-        /* Main Content */
-        main {
-            margin-left: 250px;
-            width: calc(100% - 250px);
-            padding: 2rem;
-        }
-
-        .section {
-            max-width: 800px;
-            margin: 0 auto 4rem auto;
-            background-color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        #home {
-            text-align: center;
-            background: none;
-            box-shadow: none;
-            padding: 4rem 2rem;
-        }
-
-        #home h1 {
-            font-size: 2.5rem;
-            color: #1a252f;
-            margin-bottom: 0.5rem;
-        }
-
-        #home p {
-            font-size: 1.2rem;
-            color: #666;
-        }
-
-        h2 {
-            font-size: 2rem;
-            color: #1a252f;
-            margin-bottom: 1rem;
-        }
-
-        #about p, #cv p {
-            margin-bottom: 1rem;
-            color: #555;
-        }
-
-        #cv a {
-            color: #00aaff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        #cv a:hover {
-            text-decoration: underline;
-        }
-
-        .project-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
-        .project-card {
-            background-color: #f9f9f9;
-            padding: 1.5rem;
-            border-radius: 8px;
-            transition: transform 0.3s;
-            text-align: center;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-card h3 {
-            font-size: 1.3rem;
-            color: #1a252f;
-            margin-bottom: 0.5rem;
-        }
-
-        .project-card a {
-            color: #00aaff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .project-card a:hover {
-            text-decoration: underline;
-        }
-
-        #contact p {
-            margin-bottom: 0.5rem;
-        }
-
-        #contact a {
-            color: #00aaff;
-            text-decoration: none;
-        }
-
-        #contact a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            padding: 1rem;
-            color: #666;
-            margin-top: 2rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            nav {
-                width: 100%;
-                height: auto;
-                position: static;
-                padding: 1rem;
-            }
-
-            main {
-                margin-left: 0;
-                width: 100%;
-            }
-
-            #home h1 {
-                font-size: 2rem;
-            }
-
-            #home p {
-                font-size: 1rem;
-            }
-
-            .section {
-                padding: 1.5rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <nav>
-        <div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#cv">CV</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-        <div class="social-links">
-            <a href="https://github.com/verzekering" target="_blank">GitHub</a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-        </div>
-    </nav>
-
-    <main>
-        <section id="home" class="section">
-            <h1>Soufiane Errihani</h1>
-            <p>Watermanagement Student</p>
-        </section>
-
-        <section id="about" class="section">
-            <h2>About Me</h2>
-            <p>Hallo! Ik ben Soufiane Errihani, student Watermanagement aan de Hogeschool Rotterdam. Via mijn opleiding was ik al bekend met QGIS en ArcGIS Pro, en recentelijk heb ik mijn vaardigheden uitgebreid met data science, remote sensing en Python. Momenteel ben ik op zoek naar een afstudeerstage waarin ik mijn kennis kan toepassen en verder kan groeien, bij voorkeur in GIS, data science, remote sensing of een gerelateerde richting.</p>
-        </section>
-
-        <section id="cv" class="section">
-            <h2>CV</h2>
-            <p>Bekijk mijn CV voor meer details over mijn opleiding en ervaring.</p>
-            <p><a href="path/to/your-cv.pdf" target="_blank">Download CV</a></p>
-        </section>
-
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Project 1</h3>
-                    <a href="project1.html">View Project</a>
-                </div>
-                <div class="project-card">
-                    <h3>Project 2</h3>
-                    <a href="project2.html">View Project</a>
-                </div>
-                <div class="project-card">
-                    <h3>Project 3</h3>
-                    <a href="project3.html">View Project</a>
-                </div>
-                <div class="project-card">
-                    <h3>Project 4</h3>
-                    <a href="project4.html">View Project</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <p>Feel free to reach out for collaborations or inquiries!</p>
-            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        </section>
-
-        <footer>
-            <p>© 2025 Soufiane Errihani. All rights reserved.</p>
-        </footer>
-    </main>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
-</body>
+		<!-- FOOTER -->
+		<div id="footer">
+			<a class="icon-link" target="_blank" href="tel:+31612345678">
+				<image src="./assets/icons/Phone_call.svg" class="footer-icon"/>
+			</a>
+			<a class="icon-link" target="_blank" href="http://www.linkedin.com/in/soufiane-errihani">
+				<image src="./assets/icons/LinkedIn_icon.svg" class="footer-icon"/>
+			</a>
+			<a class="icon-link" href="mailto:soufiane.errihani@example.com">
+				<image src="./assets/icons/Gmail_icon.svg" class="footer-icon"/>
+			</a>
+		</div>
+	</body>
 </html>
