@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="utf-8">
+		<link rel="icon" href="../assets/images/profiel_soufiane.png" />
+		<title>Portfolio Soufiane Errihani</title>
+		<meta name="description" content="Een watermanagementportfolio gemaakt door Soufiane Errihani.">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="../css/layout.css">
+		<link rel="stylesheet" href="../css/typography.css">
+		<link rel="stylesheet" href="../css/utilities.css">
+		<script defer src="../js/script.js"></script>
+	</head>
+	<body>
+		<!-- NAVBAR -->
+		<div class="navbar">
+			<a class="nav-title-link" href="../index.html">
+				<span class="nav-title">Portfolio Watermanagement</span>
+				<a class="button" href="mailto:soufiane.errihani@example.com">
+					<span class="button-text">Contacteer Mij</span>
+					<image src="../assets/icons/arrow-right.svg" class="right-arrow-icon">
+				</a>
+			</a>
+		</div>
+
+		<!-- MAIN PAGE CONTENT -->
+		<div id="main-content">
+			<!-- PROJECT HEADER -->
+			<div id="project-header">
+				<div class="main-title">NDVI & Hittestress Rotterdam</div>
+				<div class="body-text">Dit rapport presenteert een analyse van vegetatiegezondheid (NDVI) en hittestress in Rotterdam, uitgevoerd met ArcGIS Pro.</div>
+				<image class="project-header-image" src="../assets/images/ndvi_rotterdam.jpg">
+			</div>
+
+			<!-- PROJECT DETAILS -->
+			<div id="project-details">
+				<div class="subheader-text">Projectdetails</div>
+				<div class="project-details-content">
+					<div class="body-text">Dit rapport presenteert een analyse van vegetatiegezondheid (NDVI) en hittestress in Rotterdam, uitgevoerd met ArcGIS Pro. De analyse maakt gebruik van tools zoals Spatial Join en OLS (Ordinary Least Squares) om de relatie tussen NDVI en gevoelstemperatuur te onderzoeken.</div>
+					<div class="body-text">De NDVI-kaart toont vegetatie-indexwaarden variërend van $-0,467$ (lage vegetatie) tot 0,9 (hoge vegetatie). Groene gebieden vertegenwoordigen gezonde vegetatie, terwijl bruine gebieden minder vegetatie aangeven. De NDVI is berekend met de Raster Calculatorfunctie in ArcGIS Pro, gebruikmakend van de formule (NIR - Red) / (NIR + Red), waarbij NIR de near-infrared band en Red de rode band van de Sentinel-2 data vertegenwoordigen.</div>
+					<div class="body-text">De hittestress-kaart markeert temperatuurzones van $32^{\circ} \mathrm{C}$ (gematigd) tot boven $50^{\circ} \mathrm{C}$ (extreme hittestress). Deze kaart is gebaseerd op data van de Klimaateffectatlas.</div>
+					<div class="body-text">De OLS-tool is gebruikt om de relatie tussen NDVI-waarden en hittestress-klassen te onderzoeken. Hierbij zijn de volgende aspecten belangrijk:</div>
+					<div class="body-text">
+						<ul>
+							<li>p-waarde: Deze waarde ( $p<0,000000$ ) geeft aan hoe zeker we zijn van de relatie tussen NDVI en hittestress. Een zeer lage p-waarde, zoals deze, betekent dat de relatie zeer waarschijnlijk echt is en niet zomaar toeval.</li>
+							<li>$\mathbf{R}^2$-waarde: Met een $\mathrm{R}^2$ van 0,1 wordt slechts $10 \%$ van de variatie in hittestressklassen verklaard door NDVI. Dit betekent dat NDVI een kleine rol speelt, en andere factoren ook belangrijk zijn.</li>
+							<li>Regressielijn: De rechte lijn in de scatterplot laat de algemene trend zien tussen NDVI en hittestress. Een dalende lijn betekent dat hogere NDVI-waarden gepaard gaan met lagere hittestress-klassen, zoals van "extreme hittestress (>50 $\left.{ }^{\circ} \mathrm{C}\right)$ " naar "gematigde hittestress $\left(32^{\circ} \mathrm{C}\right)$ " volgens de legenda.</li>
+							<li>Coëfficiënt: De waarde -3,239791 geeft aan hoe sterk de hittestress-klasse verandert per eenheid toename in NDVI. Een negatieve waarde betekent dat een hogere NDVI leidt tot een daling van ongeveer 3,24 klassen (bijv. van "extreme hittestress $2\left(49^{\circ} \mathrm{C}-50^{\circ} \mathrm{C}\right)^{\prime \prime}$ naar "sterke hittestress $\left(38^{\circ} \mathrm{C}\right)^{\prime \prime}$ ), gebaseerd op de legenda van de hittestress-kaart.</li>
+						</ul>
+					</div>
+					<div class="body-text">Deze analyse biedt inzicht in vegetatiepatronen en hittestress in Rotterdam. De OLS-regressie bevestigt een significante relatie tussen de NDVI en hittestress, zoals blijkt uit de zeer lage p-waarde, maar de beperkte $R^2$-waarde vraagt om verder onderzoek met extra variabelen. Mogelijk zijn de NDVI-waarden door Klimaateffectatlas gebruikt als data voor het bepalen van de hittestress-klassen, wat de waargenomen correlatie deels zou kunnen verklaren.</div>
+				</div>
+			</div>
+
+			<!-- IMAGE GALLERY -->
+			<div id="project-gallery">
+				<div class="subheader-text">Projectafbeeldingen</div>
+				<div class="project-gallery-content">
+					<div class="gallery-image-container half-width">
+						<img src="../assets/images/ndvi_map.jpg" class="gallery-image">
+						<span class="image-caption">NDVI-kaart van Rotterdam, met vegetatie-indexwaarden van -0,467 tot 0,9.</span>
+					</div>
+					<div class="gallery-image-container half-width">
+						<img src="../assets/images/hittestress_map.jpg" class="gallery-image">
+						<span class="image-caption">Hittestress-kaart van Rotterdam, met temperatuurzones van 32°C tot boven 50°C.</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- FOOTER -->
+		<div id="footer">
+			<a class="icon-link" target="_blank" href="tel:+31612345678">
+				<image src="../assets/icons/Phone_call.svg" class="footer-icon"/>
+			</a>
+			<a class="icon-link" target="_blank" href="http://www.linkedin.com/in/soufiane-errihani">
+				<image src="../assets/icons/LinkedIn_icon.svg" class="footer-icon"/>
+			</a>
+			<a class="icon-link" href="mailto:soufiane.errihani@example.com">
+				<image src="../assets/icons/Gmail_icon.svg" class="footer-icon"/>
+			</a>
+		</div>
+	</body>
+</html>
