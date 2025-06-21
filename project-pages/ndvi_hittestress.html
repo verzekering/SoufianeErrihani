@@ -63,16 +63,34 @@
 			<div id="project-details">
 				<div class="subheader-text">Projectdetails</div>
 				<div class="project-details-content">
-					<div class="body-text">Dit rapport presenteert een analyse van vegetatiegezondheid (NDVI) en hittestress in Rotterdam, uitgevoerd met ArcGIS Pro. De analyse maakt gebruik van tools zoals Spatial Join en OLS (Ordinary Least Squares) om de relatie tussen NDVI en gevoelstemperatuur te onderzoeken.</div>
-					<div class="body-text">De NDVI-kaart toont vegetatie-indexwaarden variërend van $-0,467$ (lage vegetatie) tot 0,9 (hoge vegetatie). Groene gebieden vertegenwoordigen gezonde vegetatie, terwijl bruine gebieden minder vegetatie aangeven. De NDVI is berekend met de Raster Calculatorfunctie in ArcGIS Pro, gebruikmakend van de formule (NIR - Red) / (NIR + Red), waarbij NIR de near-infrared band en Red de rode band van de Sentinel-2 data vertegenwoordigen.</div>
-					<div class="body-text">De hittestress-kaart markeert temperatuurzones van $32^{\circ} \mathrm{C}$ (gematigd) tot boven $50^{\circ} \mathrm{C}$ (extreme hittestress). Deze kaart is gebaseerd op data van de Klimaateffectatlas.</div>
+					<div class="body-text">
+De NDVI-kaart toont vegetatie-indexwaarden variërend van -0,467 (lage vegetatie) tot 0,9
+(hoge vegetatie). Groene gebieden vertegenwoordigen gezonde vegetatie, terwijl bruine
+gebieden minder vegetatie aangeven. De NDVI is berekend met de Raster Calculator-
+functie in ArcGIS Pro, gebruikmakend van de formule (NIR - Red) / (NIR + Red),
+waarbij NIR de near-infrared band en Red de rode band van de Sentinel-2 data
+vertegenwoordigen. <p>De hittestress-kaart markeert temperatuurzones van 32°C (gematigd) tot boven 50°C
+(extreme hittestress). Deze kaart is gebaseerd op data van de Klimaateffectatlas.</p>
+
+
 					<div class="body-text">De OLS-tool is gebruikt om de relatie tussen NDVI-waarden en hittestress-klassen te onderzoeken. Hierbij zijn de volgende aspecten belangrijk:</div>
 					<div class="body-text">
 						<ul>
-							<li>p-waarde: Deze waarde ( $p<0,000000$ ) geeft aan hoe zeker we zijn van de relatie tussen NDVI en hittestress. Een zeer lage p-waarde, zoals deze, betekent dat de relatie zeer waarschijnlijk echt is en niet zomaar toeval.</li>
-							<li>$\mathbf{R}^2$-waarde: Met een $\mathrm{R}^2$ van 0,1 wordt slechts $10 \%$ van de variatie in hittestressklassen verklaard door NDVI. Dit betekent dat NDVI een kleine rol speelt, en andere factoren ook belangrijk zijn.</li>
-							<li>Regressielijn: De rechte lijn in de scatterplot laat de algemene trend zien tussen NDVI en hittestress. Een dalende lijn betekent dat hogere NDVI-waarden gepaard gaan met lagere hittestress-klassen, zoals van "extreme hittestress (>50 $\left.{ }^{\circ} \mathrm{C}\right)$ " naar "gematigde hittestress $\left(32^{\circ} \mathrm{C}\right)$ " volgens de legenda.</li>
-							<li>Coëfficiënt: De waarde -3,239791 geeft aan hoe sterk de hittestress-klasse verandert per eenheid toename in NDVI. Een negatieve waarde betekent dat een hogere NDVI leidt tot een daling van ongeveer 3,24 klassen (bijv. van "extreme hittestress $2\left(49^{\circ} \mathrm{C}-50^{\circ} \mathrm{C}\right)^{\prime \prime}$ naar "sterke hittestress $\left(38^{\circ} \mathrm{C}\right)^{\prime \prime}$ ), gebaseerd op de legenda van de hittestress-kaart.</li>
+							<li>p-waarde: Deze waarde (p < 0,000000) geeft aan hoe zeker we zijn van de relatie
+tussen NDVI en hittestress. Een zeer lage p-waarde, zoals deze, betekent dat de
+relatie zeer waarschijnlijk echt is en niet zomaar toeval.</li>
+							<li>R²-waarde: Met een R² van 0,1 wordt slechts 10% van de variatie in hittestress-
+klassen verklaard door NDVI. Dit betekent dat NDVI een kleine rol speelt, en andere
+factoren ook belangrijk zijn</li>
+							<li>Regressielijn: De rechte lijn in de scatterplot laat de algemene trend zien tussen
+NDVI en hittestress. Een dalende lijn betekent dat hogere NDVI-waarden gepaard
+gaan met lagere hittestress-klassen, zoals van "extreme hittestress (>50°C)" naar
+"gematigde hittestress (32°C)" volgens de legenda.</li>
+							<li>Coëfficiënt: De waarde -3,239791 geeft aan hoe sterk de hittestress-klasse
+verandert per eenheid toename in NDVI. Een negatieve waarde betekent dat een
+hogere NDVI leidt tot een daling van ongeveer 3,24 klassen (bijv. van "extreme
+hittestress 2 (49°C - 50°C)" naar "sterke hittestress (38°C)", gebaseerd op de
+legenda van de hittestress-kaart.</li>
 						</ul>
 					</div>
 					<div class="body-text">Deze analyse biedt inzicht in vegetatiepatronen en hittestress in Rotterdam. De OLS-regressie bevestigt een significante relatie tussen de NDVI en hittestress, zoals blijkt uit de zeer lage p-waarde, maar de beperkte $R^2$-waarde vraagt om verder onderzoek met extra variabelen. Mogelijk zijn de NDVI-waarden door Klimaateffectatlas gebruikt als data voor het bepalen van de hittestress-klassen, wat de waargenomen correlatie deels zou kunnen verklaren.</div>
@@ -84,12 +102,14 @@
 				<div class="subheader-text">Projectafbeeldingen</div>
 				<div class="project-gallery-content">
 					<div class="gallery-image-container half-width">
-						<img src="../assets/images/ndvi_map.jpg" class="gallery-image">
-						<span class="image-caption">NDVI-kaart van Rotterdam, met vegetatie-indexwaarden van -0,467 tot 0,9.</span>
+						<img src="../assets/images/NDVI_TEMP_PLOT.png" class="gallery-image">
+						<span class="image-caption" style="text-align: center; display: block;">NDVI-waardes (NDVI-values) tegenover hittestress klasses (TEMP_values).</span>
 					</div>
-					<div class="gallery-image-container half-width">
-						<img src="../assets/images/hittestress_map.jpg" class="gallery-image">
-						<span class="image-caption">Hittestress-kaart van Rotterdam, met temperatuurzones van 32°C tot boven 50°C.</span>
+					<div style="text-align: center; margin-top: 20px;">
+						<a class="button" href="../assets/pdf/OLS_Results-1.pdf">
+							<span class="button-text">OLS-Results</span>
+							<img src="../assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -106,5 +126,7 @@
 				<image src="../assets/icons/mail.svg" class="footer-icon"/>
 			</a>
 		</div>
+		
 	</body>
+	
 </html>
